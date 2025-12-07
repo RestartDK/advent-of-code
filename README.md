@@ -1,15 +1,5 @@
-# advent-of-code
+# Advent of code
 
-To install dependencies:
+Ho ho ho.
 
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.3.1. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+This includes all my worke for advent of code. Will try to be as consistent with it, for now it's being done in TS as the problems are hard enough.

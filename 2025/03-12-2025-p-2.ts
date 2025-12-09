@@ -32,7 +32,6 @@ async function getMaxJoltage(path: string): Promise<number> {
 
 		// join the array with undefined values to get the max voltage of bank
 		const res = Number(stack.join(""));
-		console.log(`✅ max joltage in bank ${bank}: ${res}`);
 		maxJoltage += res;
 	}
 

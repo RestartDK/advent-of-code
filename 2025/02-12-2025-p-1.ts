@@ -15,24 +15,19 @@ async function getSumInvalidIds(path: string): Promise<number> {
 	const idRanges = text.split(",");
 	let sumInvalidIds = 0;
 
-	console.log(idRanges);
 
 	// Do this for every id
 	for (const id of idRanges) {
 		const ranges = id.split("-");
 		const start = Number(ranges[0]);
 		const end = Number(ranges[1]);
-		console.log(`ranges: ${ranges} | ${start} to ${end}`);
-		console.log(`invalid ids ${sumInvalidIds}`);
 
 		for (let i = start; i <= end; i++) {
 			const sequence = i.toString();
 			if (sequence.length % 2 === 0) {
 				const firstHalf = sequence.slice(0, sequence.length / 2);
 				const secondHalf = sequence.slice(sequence.length / 2, sequence.length);
-				// console.log(`first half: ${firstHalf} = second half ${secondHalf}`);
 				if (firstHalf == secondHalf) {
-					console.log(`🥳 first half: ${firstHalf} = second half ${secondHalf}`);
 					sumInvalidIds += i;
 				}
 			}
@@ -44,4 +39,3 @@ async function getSumInvalidIds(path: string): Promise<number> {
 
 const res = await getSumInvalidIds("2025/02-12-2025-input.txt");
 console.log(res);
-console.log("i came");
